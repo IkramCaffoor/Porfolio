@@ -157,31 +157,23 @@ type();
 
 
 document.querySelector(".contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const country = document.getElementById("country").value;
-    const message = document.getElementById("message").value;
+    const form = document.querySelector(".contact-form");
+    const formData = new FormData(form); // includes access_key + inputs
 
-    console.log("Form submitted:");
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Country:", country);
-    console.log("Message:", message);
-
-  
     fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: new FormData(document.querySelector(".contact-form"))
+        body: formData
     })
-    .then(response => response.json())
+    .then(res => res.json())
     .then(data => {
         if (data.success) {
-            alert("Thank you, " + name + "! Your message has been received.");
-            document.querySelector(".contact-form").reset();
+            alert("Thank you! Your message has been sent successfully.");
+            form.reset();
         } else {
-            alert("Oops! Something went wrong: " + data.message);
+            alert("Error: " + data.message);
+            console.error(data);
         }
     })
     .catch(error => {
@@ -191,6 +183,7 @@ document.querySelector(".contact-form").addEventListener("submit", function(even
 });
 
     
+
 
 
 
