@@ -170,9 +170,27 @@ document.querySelector(".contact-form").addEventListener("submit", function(even
     console.log("Country:", country);
     console.log("Message:", message);
 
-    alert("Thank you, " + name + "! Your message has been received.");
+  
+    fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: new FormData(document.querySelector(".contact-form"))
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert("Thank you, " + name + "! Your message has been received.");
+            document.querySelector(".contact-form").reset();
+        } else {
+            alert("Oops! Something went wrong: " + data.message);
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("There was an error submitting the form.");
+    });
 });
 
+    
 
 
 
