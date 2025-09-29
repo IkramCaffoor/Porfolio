@@ -468,15 +468,14 @@ label {
     margin-bottom: 15px; /* reduced spacing */
 }
 
-/* Category titles */
 .hobby-category h3 {
-    font-size: 1.2rem;   /* smaller sub-heading */
-    color: #00ff66;
-    margin-bottom: 8px;
-    border-left: 3px solid #00ff66;
-    padding-left: 8px;
+    font-size: 1.4rem;       /* smaller than main heading */
+    color: #a0ffaa;          /* lighter green to differentiate */
+    margin-bottom: 10px;
+    border-left: 4px solid #00ff66; /* accent line on left */
+    padding-left: 10px;
+    font-weight: 600;
 }
-
 /* List styling */
 .hobby-category ul {
     list-style: none;
@@ -739,6 +738,7 @@ label {
   line-height: 1.6;
   text-align: left;       
 }
+
 
 
 
