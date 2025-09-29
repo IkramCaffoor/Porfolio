@@ -514,44 +514,33 @@ label {
     transform: translateX(3px);
     box-shadow: 0 0 8px rgba(0, 255, 102, 0.4);
 }
-
-.accordion {
-    background-color: rgba(0, 255, 102, 0.15);
-    color: #eaffea;
-    cursor: pointer;
-    padding: 10px 15px;
-    width: 100%;
-    border: 1px solid rgba(0,255,102,0.4);
-    border-radius: 6px;
-    text-align: left;
-    font-size: 1rem;
-    margin-bottom: 5px;
-    transition: 0.3s;
+/* Hide details initially */
+.hobby .details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
 }
 
-.accordion:hover {
-    background-color: rgba(0, 255, 102, 0.25);
+/* Show details on hover (desktop) or focus-within (touch) */
+.hobby:hover .details,
+.hobby:focus-within .details {
+    max-height: 500px; /* enough to show all list items */
 }
 
-.panel {
-    display: none;
-    padding: 10px 15px;
-    background-color: rgba(0, 255, 102, 0.05);
-    border-left: 3px solid #00ff66;
-    border-radius: 4px;
-    margin-bottom: 10px;
+/* Optional: add a subtle fade-in */
+.hobby .details li {
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
 }
 
-.panel ul {
-    list-style: none;
-    padding-left: 0;
+.hobby:hover .details li,
+.hobby:focus-within .details li {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.panel ul li::before {
-    content: "•";
-    color: #00ff66;
-    margin-right: 8px;
-}
+
 
         html {
   scroll-behavior: smooth;
@@ -750,6 +739,7 @@ label {
   line-height: 1.6;
   text-align: left;       
 }
+
 
 
 
