@@ -515,6 +515,53 @@ label {
     box-shadow: 0 0 8px rgba(0, 255, 102, 0.4);
 }
 
+/* Accordion button styling */
+.accordion {
+    background-color: rgba(0, 255, 102, 0.15);
+    color: #eaffea;
+    cursor: pointer;
+    padding: 10px 15px;
+    width: 100%;
+    border: 1px solid rgba(0,255,102,0.4);
+    border-radius: 6px;
+    text-align: left;
+    outline: none;
+    font-size: 1rem;
+    transition: 0.3s;
+    margin-bottom: 5px;
+}
+
+.accordion:hover {
+    background-color: rgba(0, 255, 102, 0.25);
+}
+
+/* Panel (hidden content) */
+.panel {
+    padding: 0 15px;
+    display: none;
+    background-color: rgba(0, 255, 102, 0.05);
+    border-left: 2px solid #00ff66;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.panel ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.panel ul li::before {
+    content: "•";
+    color: #00ff66;
+    margin-right: 8px;
+}
+
+/* Show panel when active */
+.active + .panel {
+    display: block;
+}
+
+
         html {
   scroll-behavior: smooth;
 }
@@ -712,6 +759,7 @@ label {
   line-height: 1.6;
   text-align: left;       
 }
+
 
 
 
