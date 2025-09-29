@@ -515,7 +515,6 @@ label {
     box-shadow: 0 0 8px rgba(0, 255, 102, 0.4);
 }
 
-/* Accordion button styling */
 .accordion {
     background-color: rgba(0, 255, 102, 0.15);
     color: #eaffea;
@@ -535,10 +534,9 @@ label {
     background-color: rgba(0, 255, 102, 0.25);
 }
 
-/* Panel (hidden content) */
 .panel {
     padding: 0 15px;
-    display: none;
+    display: none; /* hidden by default */
     background-color: rgba(0, 255, 102, 0.05);
     border-left: 2px solid #00ff66;
     margin-bottom: 10px;
@@ -556,10 +554,10 @@ label {
     margin-right: 8px;
 }
 
-/* Show panel when active */
 .active + .panel {
-    display: block;
+    display: block; /* show panel when active */
 }
+
 
 
         html {
@@ -759,6 +757,7 @@ label {
   line-height: 1.6;
   text-align: left;       
 }
+
 
 
 
