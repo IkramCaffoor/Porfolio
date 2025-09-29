@@ -469,6 +469,10 @@ label {
     margin-bottom: 20px;
     padding-bottom: 5px;
 }
+.hobbies h2::after {
+    content: none !important;
+}
+
 
 .hobby-category h3 {
     font-size: 1rem;
@@ -778,6 +782,7 @@ label {
   line-height: 1.6;
   text-align: left;       
 }
+
 
 
 
