@@ -461,127 +461,81 @@ label {
 
 
 
-   .hobbies h2 {
-    text-align: left;
-    font-size: 2rem;         /* bigger, more dominant */
-    color: #00ff66;
-    font-weight: bold;
-    margin-bottom: 20px;
-    padding-bottom: 5px;
-}
-.hobbies h2::after {
-    content: none !important;
+   .hobby {
+  margin-bottom: 20px;
 }
 
-
-.hobby-category h3 {
-    font-size: 1rem;
-    color: #eaffea;
-    background: rgba(0, 255, 102, 0.1);
-    padding: 10px 15px;
-    border-radius: 8px;
-    margin-bottom: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.hobby h3 {
+  font-size: 1.1rem;
+  color: #eaffea;
+  background: rgba(0, 255, 102, 0.1);
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
 }
 
-.hobby-category h3:hover,
-.hobby:focus-within h3 {
-    background: rgba(0, 255, 102, 0.25);
-    box-shadow: 0 0 12px rgba(0, 255, 102, 0.6);
-    transform: translateY(-2px);
-}
-/* List styling */
-.hobby-category ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 15px 0; /* reduced bottom space */
+.hobby h3:hover,
+.hobby.active h3 {
+  background: rgba(0, 255, 102, 0.25);
+  box-shadow: 0 0 12px rgba(0, 255, 102, 0.6);
+  transform: translateY(-2px);
 }
 
-/* List items styled like skills but smaller */
-.hobby-category ul li {
-    padding: 6px 12px;   /* tighter padding */
-    margin-bottom: 8px;  /* less spacing */
-    background: rgba(0, 255, 102, 0.15);
-    border-radius: 6px;
-    border: 1px solid rgba(0, 255, 102, 0.4);
-    display: flex;
-    align-items: center;
-    color: #eaffea;
-    font-size: 0.9rem;   /* smaller text */
-    letter-spacing: 0.3px;
-    transition: all 0.3s ease;
-}
-
-/* Custom bullet */
-.hobby-category ul li::before {
-    content: "•";
-    color: #00ff66;
-    font-weight: bold;
-    margin-right: 8px;
-    font-size: 1rem;   /* smaller bullet */
-}
-
-/* Hover effect (softer) */
-.hobby-category ul li:hover {
-    background: rgba(0, 255, 102, 0.25);
-    transform: translateX(3px);
-    box-shadow: 0 0 8px rgba(0, 255, 102, 0.4);
-}
+/* Hidden by default */
 .hobby .details {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
-    opacity: 0;
-    margin-left: 15px;
+  list-style: none;
+  padding-left: 20px;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.4s ease;
 }
-.hobby:hover .details,
-.hobby:focus-within .details {
-    max-height: 500px; /* enough space */
-    opacity: 1;
+
+/* Show when active */
+.hobby.active .details {
+  max-height: 500px;
+  opacity: 1;
 }
+
 .hobby .details li {
-    background: rgba(0, 255, 102, 0.15);
-    margin: 6px 0;
-    padding: 6px 12px;
-    border-radius: 6px;
-    border: 1px solid rgba(0, 255, 102, 0.4);
-    color: #eaffea;
-    font-size: 0.9rem;
-    letter-spacing: 0.3px;
-    transition: all 0.3s ease;
+  background: rgba(0, 255, 102, 0.15);
+  margin: 6px 0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 255, 102, 0.4);
+  color: #eaffea;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(-5px);
 }
+
+/* Animate fade-in when active */
+.hobby.active .details li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .hobby .details li:hover {
-    background: rgba(0, 255, 102, 0.25);
-    transform: translateX(4px);
-    box-shadow: 0 0 8px rgba(0, 255, 102, 0.5);
+  background: rgba(0, 255, 102, 0.25);
+  transform: translateX(4px);
+  box-shadow: 0 0 8px rgba(0, 255, 102, 0.5);
 }
 
-/* Hide details initially */
-.hobby .details {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
+/* Disable hover effects on touch devices (avoids flicker) */
+@media (hover: none) {
+  .hobby h3:hover {
+    background: rgba(0, 255, 102, 0.1);
+    box-shadow: none;
+    transform: none;
+  }
 }
 
-/* Show details on hover (desktop) or focus-within (touch) */
-.hobby:hover .details,
-.hobby:focus-within .details {
-    max-height: 500px; /* enough to show all list items */
-}
 
-/* Optional: add a subtle fade-in */
-.hobby .details li {
-    opacity: 0;
-    transform: translateY(-5px);
-    transition: all 0.3s ease;
-}
-
-.hobby:hover .details li,
-.hobby:focus-within .details li {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 
 
@@ -782,6 +736,7 @@ label {
   line-height: 1.6;
   text-align: left;       
 }
+
 
 
 
