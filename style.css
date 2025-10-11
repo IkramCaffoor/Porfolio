@@ -461,80 +461,127 @@ label {
 
 
 
-   .hobby {
-  margin-bottom: 20px;
+   .hobbies h2 {
+    text-align: left;
+    font-size: 2rem;         
+    color: #00ff66;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+.hobbies h2::after {
+    content: none !important;
 }
 
-.hobby h3 {
-  font-size: 1.1rem;
-  color: #eaffea;
-  background: rgba(0, 255, 102, 0.1);
-  padding: 10px 15px;
-  border-radius: 8px;
-  margin-bottom: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  user-select: none;
-}
 
-.hobby h3:hover,
-.hobby.active h3 {
-  background: rgba(0, 255, 102, 0.25);
-  box-shadow: 0 0 12px rgba(0, 255, 102, 0.6);
-  transform: translateY(-2px);
-}
-
-/* Hidden by default */
-.hobby .details {
-  list-style: none;
-  padding-left: 20px;
-  margin: 0;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.5s ease, opacity 0.4s ease;
-}
-
-/* Show when active */
-.hobby.active .details {
-  max-height: 500px;
-  opacity: 1;
-}
-
-.hobby .details li {
-  background: rgba(0, 255, 102, 0.15);
-  margin: 6px 0;
-  padding: 6px 12px;
-  border-radius: 6px;
-  border: 1px solid rgba(0, 255, 102, 0.4);
-  color: #eaffea;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-  opacity: 0;
-  transform: translateY(-5px);
-}
-
-/* Animate fade-in when active */
-.hobby.active .details li {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.hobby .details li:hover {
-  background: rgba(0, 255, 102, 0.25);
-  transform: translateX(4px);
-  box-shadow: 0 0 8px rgba(0, 255, 102, 0.5);
-}
-
-/* Disable hover effects on touch devices (avoids flicker) */
-@media (hover: none) {
-  .hobby h3:hover {
+.hobby-category h3 {
+    font-size: 1rem;
+    color: #eaffea;
     background: rgba(0, 255, 102, 0.1);
-    box-shadow: none;
-    transform: none;
-  }
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
+.hobby-category h3:hover,
+.hobby:focus-within h3 {
+    background: rgba(0, 255, 102, 0.25);
+    box-shadow: 0 0 12px rgba(0, 255, 102, 0.6);
+    transform: translateY(-2px);
+}
+
+.hobby-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0; 
+}
+
+
+.hobby-category ul li {
+    padding: 6px 12px;  
+    margin-bottom: 8px; 
+    background: rgba(0, 255, 102, 0.15);
+    border-radius: 6px;
+    border: 1px solid rgba(0, 255, 102, 0.4);
+    display: flex;
+    align-items: center;
+    color: #eaffea;
+    font-size: 0.9rem;  
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+}
+
+
+.hobby-category ul li::before {
+    content: "•";
+    color: #00ff66;
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 1rem;  
+}
+
+
+.hobby-category ul li:hover {
+    background: rgba(0, 255, 102, 0.25);
+    transform: translateX(3px);
+    box-shadow: 0 0 8px rgba(0, 255, 102, 0.4);
+}
+.hobby .details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    margin-left: 15px;
+}
+.hobby:hover .details,
+.hobby:focus-within .details {
+    max-height: 500px; 
+    opacity: 1;
+}
+.hobby .details li {
+    background: rgba(0, 255, 102, 0.15);
+    margin: 6px 0;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 255, 102, 0.4);
+    color: #eaffea;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+}
+.hobby .details li:hover {
+    background: rgba(0, 255, 102, 0.25);
+    transform: translateX(4px);
+    box-shadow: 0 0 8px rgba(0, 255, 102, 0.5);
+}
+
+
+.hobby .details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+
+.hobby:hover .details,
+.hobby:focus-within .details {
+    max-height: 500px; /* enough to show all list items */
+}
+
+/* Optional: add a subtle fade-in */
+.hobby .details li {
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.hobby:hover .details li,
+.hobby:focus-within .details li {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 
 
@@ -736,6 +783,7 @@ label {
   line-height: 1.6;
   text-align: left;       
 }
+
 
 
 
