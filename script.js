@@ -183,12 +183,24 @@ document.querySelector(".contact-form").addEventListener("submit", function(even
 });
 
 
+
   document.querySelectorAll('.hobby h3').forEach(header => {
-    header.addEventListener('click', () => {
+    header.addEventListener('click', (e) => {
+      e.preventDefault();
+
       const hobby = header.parentElement;
+
+      // Close any other open sections (optional)
+      document.querySelectorAll('.hobby').forEach(h => {
+        if (h !== hobby) h.classList.remove('active');
+      });
+
+      // Toggle current one
       hobby.classList.toggle('active');
     });
   });
+
+
 
 
 
