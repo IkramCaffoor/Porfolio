@@ -699,11 +699,11 @@ label {
 
 /* Buttons */
 .form-group button {
-    padding: 10px 25px;
+    padding: 6px 15px;
     font-size: 1rem;
     font-weight: 600;
     border: 2px solid #00ff66;
-    border-radius: 8px;
+    border-radius: 6px;
     background: rgba(0, 255, 102, 0.2);
     color: #eaffea;
     cursor: pointer;
@@ -738,9 +738,8 @@ label {
 
 /* Full-width Form Groups (textarea and buttons container) */
 .form-group.full-width {
-    width: 100%;
     display: flex;
-    gap: 15px;
+    gap: 10px;
     justify-content: flex-start; /* aligns Execute and Clear buttons to the left */
 }
 
@@ -855,6 +854,7 @@ label {
   line-height: 1.6;
   text-align: left;       
 }
+
 
 
 
