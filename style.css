@@ -639,40 +639,41 @@ label {
 }
 
 .form-group button {
-    padding: 10px 25px;
-    font-size: 1rem;
-    font-weight: 600;
-    border: 2px solid #00ff66;
-    border-radius: 8px;
-    background: rgba(0, 255, 102, 0.2);
-    color: #eaffea;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    letter-spacing: 0.5px;
-    box-shadow: 0 0 5px rgba(0, 255, 102, 0.5);
+  padding: 12px 28px;
+  margin: 6px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  border: 2px solid #00ff66;
+  border-radius: 10px;
+  background: rgba(0, 255, 102, 0.2);
+  color: #eaffea;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.6px;
+  box-shadow: 0 0 6px rgba(0, 255, 102, 0.5);
 }
 
 .form-group button:hover {
-    background: rgba(0, 255, 102, 0.35);
-    transform: translateY(-2px);
-    box-shadow: 0 0 12px rgba(0, 255, 102, 0.7);
+  background: rgba(0, 255, 102, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 0 14px rgba(0, 255, 102, 0.7);
 }
 
 .form-group button:active {
-    transform: translateY(1px);
-    box-shadow: 0 0 8px rgba(0, 255, 102, 0.5);
+  transform: translateY(1px);
+  box-shadow: 0 0 8px rgba(0, 255, 102, 0.5);
 }
 
-
 .form-group button[type="reset"] {
-    border-color: #ff4d4d;
-    background: rgba(255, 77, 77, 0.2);
-    color: #ffeaea;
+  border-color: #ff4d4d;
+  background: rgba(255, 77, 77, 0.2);
+  color: #ffeaea;
 }
 
 .form-group button[type="reset"]:hover {
-    background: rgba(255, 77, 77, 0.35);
-    box-shadow: 0 0 12px rgba(255, 77, 77, 0.7);
+  background: rgba(255, 77, 77, 0.35);
+  box-shadow: 0 0 14px rgba(255, 77, 77, 0.7);
 }
 
 
@@ -783,6 +784,7 @@ label {
   line-height: 1.6;
   text-align: left;       
 }
+
 
 
 
