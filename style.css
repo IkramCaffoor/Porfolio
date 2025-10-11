@@ -638,10 +638,67 @@ label {
   width: 100%;
 }
 
+/* General Contact Section */
+.contact {
+    padding: 40px 20px;
+    color: #eaffea;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Section Heading */
+.contact h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00ff66;
+    margin-bottom: 25px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels (~ Name, ~ Email, etc.) */
+.contact label {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #00ff66;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+/* Inputs, Selects, Textareas */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 102, 0.4);
+    background: rgba(0, 255, 102, 0.08);
+    color: #eaffea;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #00ff66;
+    background: rgba(0, 255, 102, 0.15);
+    box-shadow: 0 0 10px rgba(0, 255, 102, 0.6);
+}
+
+/* Buttons */
 .form-group button {
-    padding: 10px 25px;
+    padding: 12px 28px;
     font-size: 1rem;
     font-weight: 600;
+    font-family: 'Poppins', sans-serif;
     border: 2px solid #00ff66;
     border-radius: 8px;
     background: rgba(0, 255, 102, 0.2);
@@ -650,6 +707,7 @@ label {
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
     box-shadow: 0 0 5px rgba(0, 255, 102, 0.5);
+    margin-right: 10px;
 }
 
 .form-group button:hover {
@@ -675,14 +733,9 @@ label {
     box-shadow: 0 0 12px rgba(255, 77, 77, 0.7);
 }
 
-.contact label {
-    display: block;               /* ensures label is on its own line */
-    font-family: 'Poppins', sans-serif; /* modern, clean font */
-    font-size: 1.1rem;            /* slightly bigger for readability */
-    font-weight: 600;             /* bold enough to stand out */
-    color: #00ff66;               /* matches your theme */
-    margin-bottom: 8px;           /* space below label */
-    letter-spacing: 0.5px;        /* subtle spacing for clarity */
+/* Full-width Form Groups (textarea and buttons container) */
+.form-group.full-width {
+    width: 100%;
 }
 
 
@@ -793,6 +846,7 @@ label {
   line-height: 1.6;
   text-align: left;       
 }
+
 
 
 
