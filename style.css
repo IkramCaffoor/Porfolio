@@ -699,10 +699,10 @@ label {
 
 /* Buttons Container */
 .form-group.full-width {
-    width: 100%;
     display: flex;
     justify-content: flex-start;  /* Align buttons to the left */
-    gap: 10px;                    /* Space between Execute and Clear */
+    gap: 15px;  
+    margin-top: 10px;/* Space between Execute and Clear */
 }
 
 /* Buttons Styling */
@@ -861,6 +861,7 @@ label {
   line-height: 1.6;
   text-align: left;       
 }
+
 
 
 
