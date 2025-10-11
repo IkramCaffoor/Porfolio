@@ -697,6 +697,7 @@ label {
     box-shadow: 0 0 10px rgba(0, 255, 102, 0.6);
 }
 
+
 /* Buttons */
 .form-group button {
     padding: 6px 15px;
@@ -736,15 +737,42 @@ label {
     box-shadow: 0 0 12px rgba(255, 77, 77, 0.7);
 }
 
-/* Full-width Form Groups (textarea and buttons container) */
 .form-group.full-width {
-    display: flex;
+    display: flex !important;
     gap: 10px;
-    justify-content: flex-start; /* aligns Execute and Clear buttons to the left */
+    justify-content: flex-start;
+    width: auto;
+
+.form-group.full-width button {
+    padding: 6px 15px;         /* smaller buttons */
+    font-size: 0.85rem;        /* smaller text */
+    font-weight: 600;
+    border-radius: 6px;
+    width: auto;               /* do not stretch */
+    min-width: 80px; 
 }
 
+    .form-group.full-width button[type="submit"] {
+    border: 2px solid #00ff66;
+    background: rgba(0, 255, 102, 0.2);
+    color: #eaffea;
+    box-shadow: 0 0 4px rgba(0, 255, 102, 0.5);
+}
 
+    .form-group.full-width button[type="reset"] {
+    border-color: #ff4d4d;
+    background: rgba(255, 77, 77, 0.2);
+    color: #ffeaea;
+}
 
+    /* Hover and active effects */
+.form-group.full-width button:hover {
+    transform: translateY(-1px);
+}
+
+.form-group.full-width button:active {
+    transform: translateY(1px);
+}
 
 
 
@@ -854,6 +882,7 @@ label {
   line-height: 1.6;
   text-align: left;       
 }
+
 
 
 
