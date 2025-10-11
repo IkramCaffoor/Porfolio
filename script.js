@@ -183,6 +183,14 @@ document.querySelector(".contact-form").addEventListener("submit", function(even
 });
 
 
+  document.querySelectorAll('.hobby h3').forEach(header => {
+    header.addEventListener('click', () => {
+      const hobby = header.parentElement;
+      hobby.classList.toggle('active');
+    });
+  });
+
+
 
 
 
