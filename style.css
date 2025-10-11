@@ -662,14 +662,14 @@ label {
 
 /* Labels (~ Name, ~ Email, etc.) */
 .contact label {
-    display: block;                /* Each label on its own line */
+    display: block;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;             /* Slightly larger for clarity */
-    font-weight: 600;              /* Bold to stand out */
-    color: #00ff66;                /* Matches theme */
-    margin-bottom: 8px;            /* Space below label */
-    letter-spacing: 0.5px;         /* Better readability */
-    text-shadow: 0 0 6px rgba(0, 255, 102, 0.7); /* optional neon glow */
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #00ff66;
+    margin-bottom: 10px;
+    letter-spacing: 0.7px;
+    text-shadow: 0 0 6px rgba(0, 255, 102, 0.7);
 }
 
 /* Inputs, Selects, Textareas */
@@ -683,10 +683,10 @@ label {
     background: rgba(0, 255, 102, 0.08);
     color: #eaffea;
     outline: none;
+    transition: all 0.3s ease;
+    margin-top: 6px;
     width: 100%;
     box-sizing: border-box;
-    margin-top: 6px;
-    transition: all 0.3s ease;
 }
 
 .form-group input:focus,
@@ -697,30 +697,22 @@ label {
     box-shadow: 0 0 10px rgba(0, 255, 102, 0.6);
 }
 
-/* Buttons Container */
-.form-group.full-width {
-    display: flex;
-    justify-content: flex-start;  /* Align buttons to the left */
-    gap: 15px;  
-    margin-top: 10px;/* Space between Execute and Clear */
-}
-
-/* Buttons Styling */
+/* Buttons */
 .form-group button {
-    padding: 10px 25px;           /* Keep original smaller size */
+    padding: 10px 25px;
     font-size: 1rem;
     font-weight: 600;
-    font-family: 'Poppins', sans-serif;
     border: 2px solid #00ff66;
     border-radius: 8px;
     background: rgba(0, 255, 102, 0.2);
     color: #eaffea;
     cursor: pointer;
-    letter-spacing: 0.5px;
     transition: all 0.3s ease;
+    letter-spacing: 0.5px;
     box-shadow: 0 0 5px rgba(0, 255, 102, 0.5);
 }
 
+/* Hover and active effects */
 .form-group button:hover {
     background: rgba(0, 255, 102, 0.35);
     transform: translateY(-2px);
@@ -744,10 +736,12 @@ label {
     box-shadow: 0 0 12px rgba(255, 77, 77, 0.7);
 }
 
-/* Extra spacing for full-width form groups like textarea */
-.form-group.full-width textarea {
-    resize: vertical;
-    min-height: 100px;
+/* Full-width Form Groups (textarea and buttons container) */
+.form-group.full-width {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start; /* aligns Execute and Clear buttons to the left */
 }
 
 
@@ -861,6 +855,7 @@ label {
   line-height: 1.6;
   text-align: left;       
 }
+
 
 
 
