@@ -653,32 +653,29 @@ label {
     margin-bottom: 25px;
 }
 
-/* Form Groups */
+/* Form Group */
 .form-group {
-    margin-bottom: 30px;
+    margin-bottom: 22px;
     display: flex;
     flex-direction: column;
 }
 
 /* Labels (~ Name, ~ Email, etc.) */
 .contact label {
-    display: block;
+    display: block;                /* Each label on its own line */
     font-family: 'Poppins', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #00ff66;
-    margin-bottom: 10px;
-    letter-spacing: 0.7px;
-    text-shadow: 0 0 6px rgba(0, 255, 102, 0.7);
+    font-size: 1.1rem;             /* Slightly larger for clarity */
+    font-weight: 600;              /* Bold to stand out */
+    color: #00ff66;                /* Matches theme */
+    margin-bottom: 8px;            /* Space below label */
+    letter-spacing: 0.5px;         /* Better readability */
+    text-shadow: 0 0 6px rgba(0, 255, 102, 0.7); /* optional neon glow */
 }
 
 /* Inputs, Selects, Textareas */
 .form-group input,
 .form-group select,
 .form-group textarea {
-    margin-top: 6px;
-    width: 100%;
-    box-sizing: border-box;
     padding: 12px 15px;
     font-size: 1rem;
     border-radius: 8px;
@@ -686,6 +683,9 @@ label {
     background: rgba(0, 255, 102, 0.08);
     color: #eaffea;
     outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 6px;
     transition: all 0.3s ease;
 }
 
@@ -697,9 +697,17 @@ label {
     box-shadow: 0 0 10px rgba(0, 255, 102, 0.6);
 }
 
-/* Buttons (Original Size) */
+/* Buttons Container */
+.form-group.full-width {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;  /* Align buttons to the left */
+    gap: 10px;                    /* Space between Execute and Clear */
+}
+
+/* Buttons Styling */
 .form-group button {
-    padding: 10px 25px;          /* keep original small size */
+    padding: 10px 25px;           /* Keep original smaller size */
     font-size: 1rem;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
@@ -711,7 +719,6 @@ label {
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
     box-shadow: 0 0 5px rgba(0, 255, 102, 0.5);
-    margin-right: 10px;
 }
 
 .form-group button:hover {
@@ -737,9 +744,10 @@ label {
     box-shadow: 0 0 12px rgba(255, 77, 77, 0.7);
 }
 
-/* Full-width Form Groups (textarea and buttons container) */
-.form-group.full-width {
-    width: 100%;
+/* Extra spacing for full-width form groups like textarea */
+.form-group.full-width textarea {
+    resize: vertical;
+    min-height: 100px;
 }
 
 
@@ -853,6 +861,7 @@ label {
   line-height: 1.6;
   text-align: left;       
 }
+
 
 
 
