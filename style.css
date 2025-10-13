@@ -741,7 +741,7 @@ label {
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 35px;
   margin: 20px 0;
   flex-wrap: wrap;            /* wrap on small screens */
   align-items: center;
@@ -754,20 +754,20 @@ label {
   align-items: center;
   text-decoration: none;
   color: #00ff66;
-  gap: 6px;
+  gap: 8px;
   transition: transform 0.18s ease, color 0.18s ease;
   outline: none;
 }
 
 /* Icon circle */
 .social-links a i {
-  width: 50px;
-  height: 50px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem; /* slightly reduced for balance */
+  font-size: 1.75rem; /* slightly reduced for balance */
   margin-bottom: 0;   /* use gap on parent instead */
   background: rgba(0, 255, 102, 0.08);
   border: 1px solid rgba(0, 255, 102, 0.35);
@@ -779,7 +779,7 @@ label {
 
 /* Label text */
 .social-links a span {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #d9fcd9;
   line-height: 1;
 }
@@ -791,7 +791,7 @@ label {
   background: #00ff66;
   color: #002b00; /* dark text on bright bg */
   box-shadow: 0 0 12px rgba(0, 255, 102, 0.45), 0 0 30px rgba(0, 255, 102, 0.15);
-  transform: translateY(-3px) scale(1.08);
+  transform: translateY(-3px) scale(1.1);
 }
 
 /* Slight lift of whole link on hover for affordance */
@@ -809,15 +809,15 @@ label {
 /* Smaller screens: reduce sizes and gaps */
 @media (max-width: 520px) {
   .social-links {
-    gap: 14px;
+    gap: 18px;
   }
   .social-links a i {
-    width: 44px;
-    height: 44px;
-    font-size: 1.1rem;
+    width: 55px;
+    height: 55px;
+    font-size: 1.4rem;
   }
   .social-links a span {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -879,6 +879,7 @@ label {
   line-height: 1.6;
   text-align: left;       
 }
+
 
 
 
